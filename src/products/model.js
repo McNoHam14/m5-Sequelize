@@ -13,7 +13,7 @@ import sequelize from "../db.js";
 // }
 
 const ProductsModel = sequelize.define("product", {
-  userId: {
+  productId: {
     type: DataTypes.UUID,
     primaryKey: true,
     defaultValue: DataTypes.UUIDV4,
@@ -27,7 +27,7 @@ const ProductsModel = sequelize.define("product", {
     allowNull: false,
   },
   description: {
-    type: DataTypes.STRING(80),
+    type: DataTypes.STRING(120),
     allowNull: false,
   },
   imageUrl: {
