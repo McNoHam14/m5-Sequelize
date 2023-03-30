@@ -3,6 +3,7 @@ import cors from "cors";
 import listEndpoints from "express-list-endpoints";
 import { pgConnect } from "./db.js";
 import productsRouter from "./products/index.js";
+import categoryRouter from "./category/index.js";
 import {
   badRequestErrorHandler,
   genericErrorHandler,
@@ -18,6 +19,7 @@ server.use(Express.json());
 
 // ENDPOINTS
 server.use("/products", productsRouter);
+server.use("/categories", categoryRouter);
 
 // ERROR HANDLERS
 server.use(badRequestErrorHandler);
